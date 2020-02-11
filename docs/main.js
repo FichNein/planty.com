@@ -3,9 +3,9 @@ document.getElementById("prev").addEventListener("click", function() {
     let picture = document.getElementById("plant");
 
     let attr = picture.attributes[2].value
-    let regex = attr[10]
+    let regex = attr[8]
 
-    let i = 11
+    let i = 9
    
     while(attr[i] != '.') {
         regex += attr[i];
@@ -14,7 +14,7 @@ document.getElementById("prev").addEventListener("click", function() {
 
     if(regex > 1) {
         regex--;
-        document.getElementById("plant").src="../photos/" + regex + ".jpg";
+        document.getElementById("plant").src="/photos/" + regex + ".jpg";
         document.getElementById("desc").innerHTML = "Photo " + regex;
     }
 
@@ -25,10 +25,10 @@ document.getElementById("prev").addEventListener("click", function() {
 document.getElementById("next").addEventListener("click", function() {
     let picture = document.getElementById("plant");
 
-    let attr = picture.attributes[2].value
-    let regex = attr[10]
+    let attr = picture.attributes[2].value;
+    let regex = attr[8];
 
-    let i = 11
+    let i = 9;
    
     while(attr[i] != '.') {
         regex += attr[i];
@@ -36,7 +36,7 @@ document.getElementById("next").addEventListener("click", function() {
     }
 
     regex++;
-    document.getElementById("plant").src="../photos/" + regex + ".jpg";
+    document.getElementById("plant").src="/photos/" + regex + ".jpg";
     document.getElementById("desc").innerHTML = "Photo " + regex;
     
     console.log(picture)
