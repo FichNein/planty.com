@@ -16,8 +16,8 @@ document.getElementById("prev").addEventListener("click", function() {
         regex--;
         document.getElementById("plant").src="/photos/" + regex + ".jpg";
         document.getElementById("desc").innerHTML = "Photo " + regex;
-    }
-
+    } 
+    
     console.log(picture)
 
 });  
